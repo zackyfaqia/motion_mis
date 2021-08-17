@@ -11,6 +11,13 @@ def setup_driver(email, password):
     actions.login(driver, email, password) # if email and password isnt given, it'll prompt in terminal
     return driver
 
+def save_generation_config(path, data):
+    with open(f"{path}_generated/config.yaml", 'w') as stream:
+        try:
+            yaml.dump(data, stream)
+        except yaml.YAMLError as exc:
+            print(exc)
+
 def read_generation_yaml(path, filename):
     with open(f"{path}/{filename}", 'r') as stream:
         try:
@@ -51,6 +58,7 @@ if __name__ == '__main__':
     generation_file_name = []
     for dirpath, dnames, fnames in os.walk(member_data_path):
         generation_file_name = fnames
+    save_generation_config(member_data_path, {'files': generation_file_name})
     for filename in generation_file_name:
         crawl(member_data_path, filename)
     driver.quit()
