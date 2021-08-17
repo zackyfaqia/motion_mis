@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:motion_mis/feature/home/repository/member_repository.dart';
 
 class Member {
   final int index;
@@ -8,6 +9,26 @@ class Member {
 }
 
 class MyHomeController extends GetxController {
+  final firstLoad = true;
+  final generationLoading = [true];
+
+  final httpClient = GetHttpClient();
+  late MemberRepository memberRepository;
+
+  @override
+  void onInit() {
+    super.onInit();
+    memberRepository = MemberRepository(httpClient);
+  }
+
+  @override
+  void onReady() {
+    super.onReady();
+    memberRepository.getFileList().then((value) {
+      print(value);
+    });
+  }
+
   final members = List.generate(30, (index) => Member(index));
 }
 
