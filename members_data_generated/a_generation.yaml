@@ -20,15 +20,6 @@ members:
   name: Dani Agung Prastiyo
   profile_image: https://media-exp1.licdn.com/dms/image/C5603AQGNdFsdjXBoYA/profile-displayphoto-shrink_400_400/0/1592904592205?e=1634774400&v=beta&t=gAbo_ATGv4KO-zO7-gPEYo4t-jq5xKGOD1j6mlulrNs
   role: Programmer | Aslab
-- about: ''
-  cover_image: ''
-  email: ''
-  full_name: Dani Agung Prastiyo
-  headline: Senior Associate at KPMG Indonesia | OSCP, eCPPTv2, eWPT, Cybernetics
-  linkedin: https://www.linkedin.com/in/daniagung/
-  name: Dani Agung Prastiyo
-  profile_image: https://media-exp1.licdn.com/dms/image/C5603AQGNdFsdjXBoYA/profile-displayphoto-shrink_400_400/0/1592904592205?e=1634774400&v=beta&t=gAbo_ATGv4KO-zO7-gPEYo4t-jq5xKGOD1j6mlulrNs
-  role: Programmer | Aslab
 - about: "I\u2019m an experienced Product Owner and UI/UX Designer in Software Design.\
     \ Heavily invested in delivering the best possible product value with data analysis\
     \ to create decisions and entrepreneurial insight."
@@ -109,26 +100,6 @@ members:
   name: Rama
   profile_image: https://media-exp1.licdn.com/dms/image/C5603AQGrIZj9GRpVJA/profile-displayphoto-shrink_400_400/0/1622586412260?e=1634774400&v=beta&t=elz4yFCCUS4gmBaUVbq4bomMzvfWPtN73tmd4uCSp4U
   role: Programmer
-- about: A critical thinking person and highly motivated to learn about everything
-    new, especially in front end web development. If you are interested with my profile,
-    you can visit my Online CV and Portfolio at https://ramaadtym.web.id/
-  cover_image: ''
-  email: ''
-  full_name: Rama Aditya
-  headline: Software Engineer di Qoala
-  linkedin: https://www.linkedin.com/in/ramaadtym/
-  name: Rama
-  profile_image: https://media-exp1.licdn.com/dms/image/C5603AQGrIZj9GRpVJA/profile-displayphoto-shrink_400_400/0/1622586412260?e=1634774400&v=beta&t=elz4yFCCUS4gmBaUVbq4bomMzvfWPtN73tmd4uCSp4U
-  role: Programmer
-- about: Data science enthusiast, loves music and sports.
-  cover_image: https://media-exp1.licdn.com/dms/image/C5616AQFy__ASM81_vg/profile-displaybackgroundimage-shrink_350_1400/0/1610096930775?e=1634774400&v=beta&t=k3m0O_TUEM2TJb_paiGcTwB_CXF0wXnH8NpAYipjddU
-  email: ''
-  full_name: Sarah Fauziah Lestari
-  headline: Trainee Non-Digital Synergy, Performance and Support at Telkomsel
-  linkedin: https://www.linkedin.com/in/sarahflestari/
-  name: Sarah
-  profile_image: https://media-exp1.licdn.com/dms/image/C5103AQF50CbNzduapQ/profile-displayphoto-shrink_400_400/0/1583721658470?e=1634774400&v=beta&t=j6LBQ6kMq8x84OsaqTmJaYA85zawK_iHAM4LRh2SK-k
-  role: Programmer | Aslab
 - about: Data science enthusiast, loves music and sports.
   cover_image: https://media-exp1.licdn.com/dms/image/C5616AQFy__ASM81_vg/profile-displaybackgroundimage-shrink_350_1400/0/1610096930775?e=1634774400&v=beta&t=k3m0O_TUEM2TJb_paiGcTwB_CXF0wXnH8NpAYipjddU
   email: ''

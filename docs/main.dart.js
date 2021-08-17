@@ -54037,7 +54037,7 @@ q=s.gfp()
 s=s.x
 s=q.fB(0,s==null?H.aB():s)
 return this.wI(r.a<1200?21:21+(s.a-1200)/2,1.5)},
-rA:function(a){return this.wI(21,1)}}
+rA:function(a){return this.wI(21,2)}}
 O.Ua.prototype={
 $1:function(a){var s=null,r=L.EQ(this.a.y,s),q=this.b,p=a.db.length
 return new M.lZ(new E.qz(r,new P.Q(1/0,56),s),new B.B0(new B.Zl(400,10,10,this.c),new G.Zg(new O.U9(a),p,!0,!0,!0),new V.bi(q,12,q,12),C.l,!1,s,!0,C.kT,!1,s,p,C.b2,C.xX,s,C.ag,s),s)},

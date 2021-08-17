@@ -77,6 +77,6 @@ class MyHomePage extends GetResponsiveView {
 
   @override
   Widget? phone() {
-    return createScreen(21, 1);
+    return createScreen(21, 4 / 2);
   }
 }
