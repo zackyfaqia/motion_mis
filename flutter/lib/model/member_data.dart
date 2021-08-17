@@ -6,6 +6,8 @@ class Member {
 
   String get fullName => datas['full_name'] ?? '';
 
+  String get profPic => datas['profile_image'] ?? '';
+
   String get linkedIn => datas['linkedin'] ?? '';
 
   String get email => datas['email'] ?? '';

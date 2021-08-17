@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:motion_mis/feature/home/member_card_view.dart';
 import 'package:motion_mis/feature/home/repository/member_repository.dart';
 import 'package:motion_mis/model/member_data.dart';
 
@@ -55,16 +56,7 @@ class MyHomePage extends GetResponsiveView {
             mainAxisSpacing: 10,
           ),
           itemCount: ctlr.members.length,
-          itemBuilder: (ctx, idx) {
-            return Container(
-              alignment: Alignment.center,
-              child: Text('Member ${idx}'),
-              decoration: BoxDecoration(
-                color: Colors.amber,
-                borderRadius: BorderRadius.circular(15),
-              ),
-            );
-          },
+          itemBuilder: (ctx, idx) => MemberCardView(ctlr.members[idx]),
         ),
       ),
     );
