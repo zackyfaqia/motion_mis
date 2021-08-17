@@ -1,6 +1,11 @@
 members:
-- email: ''
-  linkedin: ''
-  name: Joshua
-  role: ''
+- about: A Passionate iOS Developer and still focused to be a Good Developer.
+  cover_image: https://media-exp1.licdn.com/dms/image/C5616AQF-lfKvPYh8Zg/profile-displaybackgroundimage-shrink_350_1400/0/1607319957578?e=1634774400&v=beta&t=fr2p34muiFFtDY-Ihj91DHHRem4m3mNeCR0jDx2Jm8I
+  email: ''
+  full_name: Agus Adi Pranata
+  headline: iOS Developer and Graphic Designer
+  linkedin: https://www.linkedin.com/in/agus-adi-pranata/
+  name: (contoh) Gus Adi
+  profile_image: https://media-exp1.licdn.com/dms/image/C5603AQH1ZLTpqg6WJg/profile-displayphoto-shrink_400_400/0/1618319192195?e=1634774400&v=beta&t=maNQUACOnzJ9RwoZB-NTIrVtWvPO8UOiRMSXS7vG-Oo
+  role: Programmer | Aslab
 name: Fortune Cookie
