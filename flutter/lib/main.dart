@@ -9,11 +9,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Motion MIS',
+      title: "Motion's Members Network",
       theme: ThemeData(
         primaryColor: MotionColor.RED,
       ),
-      home: MyHomePage(title: 'Motion MIS'),
+      home: MyHomePage(title: "Motion's Members Network"),
     );
   }
 }

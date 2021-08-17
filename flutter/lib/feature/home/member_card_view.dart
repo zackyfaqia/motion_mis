@@ -15,28 +15,38 @@ class MemberCardView extends GetResponsiveView {
 
   @override
   Widget? desktop() {
+    print(Get.width);
     final screenIsSmall = Get.width < 1200;
     final dynamicPadding = (Get.width - 1200) / 2;
     final paddingSide = screenIsSmall ? 21.0 : 21 + dynamicPadding;
-    return createCard(100);
+    return createCard(62);
   }
 
   @override
   Widget? phone() {
-    return createCard(52);
+    return createCard(42);
   }
 
   Widget createCard(double circleSize) {
     return Container(
-      alignment: Alignment.center,
-      child: Column(
+      padding: const EdgeInsets.all(6),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           if (member.profPic.isNotEmpty)
             CircleAvatar(
-              child: Image.network(member.profPic),
               radius: circleSize,
+              backgroundImage: NetworkImage(member.profPic),
+              backgroundColor: Colors.transparent,
+            ).paddingOnly(right: 6),
+          Expanded(
+            child: Column(
+              children: [
+                Text(member.fullName),
+                Text(member.datas['headline']),
+              ],
             ),
-          Text('Member ${member.datas}')
+          ),
         ],
       ),
       decoration: BoxDecoration(
