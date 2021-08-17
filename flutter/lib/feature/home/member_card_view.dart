@@ -23,6 +23,10 @@ class MemberCardViewController extends GetxController {
         return MotionColor.GREY;
     }
   }
+
+  bool isProfilePictureExist(String address) {
+    return address.isNotEmpty && !address.contains('data:image/gif');
+  }
 }
 
 class MemberCardView extends GetResponsiveView {
@@ -78,11 +82,21 @@ class MemberCardView extends GetResponsiveView {
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                if (member.profPic.isNotEmpty)
+                if (ctlr.isProfilePictureExist(member.profPic))
                   CircleAvatar(
                     radius: circleSize,
                     backgroundImage: NetworkImage(member.profPic),
                     backgroundColor: Colors.transparent,
+                  ).paddingOnly(left: circlePadding / 2, right: circlePadding),
+                if (!ctlr.isProfilePictureExist(member.profPic))
+                  CircleAvatar(
+                    radius: circleSize,
+                    child: Icon(
+                      Icons.person_outlined,
+                      size: circleSize,
+                      color: MotionColor.RED,
+                    ),
+                    backgroundColor: MotionColor.YELLOW,
                   ).paddingOnly(left: circlePadding / 2, right: circlePadding),
                 getPersonDesc(ctlr, nameSize, descSize, chipSize),
               ],
