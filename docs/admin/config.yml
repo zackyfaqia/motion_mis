@@ -1,5 +1,6 @@
 backend:
   name: github
+  repo: alifgiant/motion_mis
   branch: master
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
