@@ -1,4 +1,4 @@
-import 'package:motion_mis/feature/home/model/member_data.dart';
+import 'package:motion_mis/model/member_data.dart';
 
 class GenerationData {
   final String name;

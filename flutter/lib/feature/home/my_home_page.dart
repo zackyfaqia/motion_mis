@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:motion_mis/feature/home/model/member_data.dart';
 import 'package:motion_mis/feature/home/repository/member_repository.dart';
+import 'package:motion_mis/model/member_data.dart';
 
 class MyHomeController extends GetxController {
-  final members = List.empty(growable: true);
+  final List<Member> members = List.empty(growable: true);
 
   late MemberRepository memberRepository;
 

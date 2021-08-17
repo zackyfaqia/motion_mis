@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
-import 'package:motion_mis/feature/home/model/generation_data.dart';
-import 'package:motion_mis/feature/home/model/member_data.dart';
 import 'package:motion_mis/feature/home/repository/member_sources.dart';
+import 'package:motion_mis/model/generation_data.dart';
+import 'package:motion_mis/model/member_data.dart';
 import 'package:yaml/yaml.dart';
 
 class MemberRepository {
