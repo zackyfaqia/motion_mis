@@ -1,3 +1,4 @@
+import 'dart:html' as html;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
@@ -27,6 +28,10 @@ class MemberCardViewController extends GetxController {
   bool isProfilePictureExist(String address) {
     return address.isNotEmpty && !address.contains('data:image/gif');
   }
+
+  void navigateOnClick(String url) {
+    html.window.open(url, "_blank");
+  }
 }
 
 class MemberCardView extends GetResponsiveView {
@@ -36,13 +41,13 @@ class MemberCardView extends GetResponsiveView {
 
   @override
   Widget? builder() {
-    print('builder: ${Get.width}');
+    // print('builder: ${Get.width}');
     return createCard(80, 12, 21, 18, 12);
   }
 
   @override
   Widget? desktop() {
-    print('desktop: ${Get.width}');
+    // print('desktop: ${Get.width}');
     final screenIsSmall = Get.width < 1000;
     final circleSize = screenIsSmall ? 42.0 : 62.0;
     final circlePadding = screenIsSmall ? 12.0 : 24.0;
@@ -60,7 +65,7 @@ class MemberCardView extends GetResponsiveView {
 
   @override
   Widget? phone() {
-    print('phone: ${Get.width}');
+    // print('phone: ${Get.width}');
     return createCard(42, 12, 16, 12, 10);
   }
 
@@ -73,60 +78,75 @@ class MemberCardView extends GetResponsiveView {
   ) {
     return GetBuilder<MemberCardViewController>(
       init: MemberCardViewController(),
-      builder: (ctlr) => Container(
-        padding: const EdgeInsets.all(6),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                if (ctlr.isProfilePictureExist(member.profPic))
-                  CircleAvatar(
-                    radius: circleSize,
-                    backgroundImage: NetworkImage(member.profPic),
-                    backgroundColor: Colors.transparent,
-                  ).paddingOnly(left: circlePadding / 2, right: circlePadding),
-                if (!ctlr.isProfilePictureExist(member.profPic))
-                  CircleAvatar(
-                    radius: circleSize,
-                    child: Icon(
-                      Icons.person_outlined,
-                      size: circleSize,
-                      color: MotionColor.RED,
-                    ),
-                    backgroundColor: MotionColor.YELLOW,
-                  ).paddingOnly(left: circlePadding / 2, right: circlePadding),
-                getPersonDesc(ctlr, nameSize, descSize, chipSize),
-              ],
-            ),
-            Container(height: 16),
-            Wrap(
-              spacing: 4,
-              runSpacing: 4,
-              children: [
-                createChip(
-                  chipSize,
-                  ctlr.getGenerationColor(member.generation),
-                  member.generation,
-                ),
-                ...member.role.split('|').map(
-                      (role) => createChip(
-                        chipSize,
-                        MotionColor.GREY,
-                        role.trim(),
-                      ),
-                    ),
-              ],
-            ),
-          ],
-        ),
-        decoration: BoxDecoration(
-          color: MotionColor.LIGHT_BROWN,
-          borderRadius: BorderRadius.circular(8),
+      builder: (ctlr) => InkWell(
+        onTap: () => ctlr.navigateOnClick(member.linkedIn),
+        child: Container(
+          padding: const EdgeInsets.all(6),
+          child: createPerson(
+              ctlr, circleSize, circlePadding, nameSize, descSize, chipSize),
+          decoration: BoxDecoration(
+            color: MotionColor.LIGHT_BROWN,
+            borderRadius: BorderRadius.circular(8),
+          ),
         ),
       ),
+    );
+  }
+
+  Column createPerson(MemberCardViewController ctlr, double circleSize,
+      double circlePadding, double nameSize, double descSize, double chipSize) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        createPersonMainInfo(
+            ctlr, circleSize, circlePadding, nameSize, descSize, chipSize),
+        Container(height: 16),
+        Wrap(
+          spacing: 4,
+          runSpacing: 4,
+          children: [
+            createChip(
+              chipSize,
+              ctlr.getGenerationColor(member.generation),
+              member.generation,
+            ),
+            ...member.role.split('|').map(
+                  (role) => createChip(
+                    chipSize,
+                    MotionColor.GREY,
+                    role.trim(),
+                  ),
+                ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Row createPersonMainInfo(MemberCardViewController ctlr, double circleSize,
+      double circlePadding, double nameSize, double descSize, double chipSize) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        if (ctlr.isProfilePictureExist(member.profPic))
+          CircleAvatar(
+            radius: circleSize,
+            backgroundImage: NetworkImage(member.profPic),
+            backgroundColor: Colors.transparent,
+          ).paddingOnly(left: circlePadding / 2, right: circlePadding),
+        if (!ctlr.isProfilePictureExist(member.profPic))
+          CircleAvatar(
+            radius: circleSize,
+            child: Icon(
+              Icons.person_outlined,
+              size: circleSize,
+              color: MotionColor.RED,
+            ),
+            backgroundColor: MotionColor.YELLOW,
+          ).paddingOnly(left: circlePadding / 2, right: circlePadding),
+        getPersonDesc(ctlr, nameSize, descSize, chipSize),
+      ],
     );
   }
 
