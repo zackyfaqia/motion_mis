@@ -39,13 +39,14 @@ def crawl(member_data_path, filename):
     for idx, member in enumerate(gen_data['members']):
         print(f"{idx+1}. {member['name']} : {member['linkedin']}")
         
-        # crawling
-        person = Person(member['linkedin'], driver=driver, close_on_complete=False)
-        member['full_name'] = person.name
-        member['headline'] = person.headline
-        member['about'] = person.about
-        member['profile_image'] = person.profile_image
-        member['cover_image'] = person.cover_image
+        if member['linkedin']:
+            # crawling
+            person = Person(member['linkedin'], driver=driver, close_on_complete=False)
+            member['full_name'] = person.name
+            member['headline'] = person.headline
+            member['about'] = person.about
+            member['profile_image'] = person.profile_image
+            member['cover_image'] = person.cover_image
     save_generation_yaml(member_data_path, filename, gen_data)
     print(f'========= saved: {member_data_path}_generated/{filename} ========')
 
