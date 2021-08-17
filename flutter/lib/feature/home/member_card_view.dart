@@ -13,7 +13,7 @@ class MemberCardViewController extends GetxController {
         return MotionColor.GREEN;
       case 'Buttermilk':
         return MotionColor.BLUE;
-      case 'Cheese Cake':
+      case 'Cheesecake':
         return MotionColor.ORANGE;
       case 'Derby Pie':
         return MotionColor.PURPLE;
