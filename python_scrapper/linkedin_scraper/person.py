@@ -35,7 +35,7 @@ class Person(Scraper):
         self.headline = ''
         self.profile_image = ''
         self.cover_image = ''
-        self.about = about or []
+        self.about = about or ''
         self.experiences = experiences or []
         self.educations = educations or []
         self.interests = interests or []
@@ -63,9 +63,6 @@ class Person(Scraper):
 
         if scrape:
             self.scrape(close_on_complete)
-
-    def add_about(self, about):
-        self.about.append(about)
 
     def add_experience(self, experience):
         self.experiences.append(experience)
@@ -143,7 +140,7 @@ class Person(Scraper):
         except:
             about = None
         if about:
-            self.add_about(about.text.strip())
+            self.about = about.text.strip().split('\n')[0]
 
         # driver.execute_script(
         #     "window.scrollTo(0, Math.ceil(document.body.scrollHeight/2));"
