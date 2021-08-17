@@ -1,2 +1,2 @@
 # pip install -r requirements.txt
-python3 data_feeder/retrieve_data.py
+python3 python_scrapper/retrieve_data.py
