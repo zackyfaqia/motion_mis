@@ -1,12 +1,14 @@
 members:
-- about: Hello, I am Alif. I am someone who loves to learn something new and always
-    go for excellence. I specialize in Android Mobile Dev using Kotlin and Flutter.
-  cover_image: https://media-exp1.licdn.com/dms/image/C5616AQEDd4W9ASASQQ/profile-displaybackgroundimage-shrink_350_1400/0/1627980544946?e=1634774400&v=beta&t=Tee2ULYOYoQebYRlrev3dDUB0bBTkUaIkc0XZaJuukg
-  email: hello@alifakbar.com
-  full_name: Muhammad Alif Akbar
-  headline: Mobile Application Developer at Grab
-  linkedin: https://www.linkedin.com/in/muhammad-alif-akbar/
-  name: Alif Akbar
-  profile_image: https://media-exp1.licdn.com/dms/image/C5603AQGCkEVz7obtsg/profile-displayphoto-shrink_400_400/0/1590068673405?e=1634774400&v=beta&t=1OaQrcXIDa8-1h5LtcGjKo0PI2n-E80gVA6qygVWP28
-  role: Programmer | Aslab | Kordas
+- about: I am a UX Designer obsessed with solving problems through translating user
+    needs to empathetic design solutions. Coming from Computer Science education background,
+    I always try to find the sweet spot between tech and design feasibility in every
+    case. Passionate about creating user-centric, delightful digital products.
+  cover_image: https://media-exp1.licdn.com/dms/image/C5116AQHihk1FMCnCDQ/profile-displaybackgroundimage-shrink_350_1400/0/1581250412058?e=1634774400&v=beta&t=iyQ2cxU_lRwWICSJLx88lCuwSPZ2Y3VnqpS2jc7FN7M
+  email: ''
+  full_name: Adi Nugroho
+  headline: "Design at TabSquare \u2022 UX Designer"
+  linkedin: https://www.linkedin.com/in/adinugrhoo/
+  name: Adi Nugroho
+  profile_image: https://media-exp1.licdn.com/dms/image/C5603AQGPEJaMpaY78A/profile-displayphoto-shrink_400_400/0/1592251432010?e=1634774400&v=beta&t=QUwzwjc9XX63dpFACoVSwoYthNbm4dE3yhIOty9iBJI
+  role: Desinger | Aslab | Kordas
 name: Generation A

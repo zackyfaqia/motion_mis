@@ -1,3 +1,8 @@
 files:
 - a_generation.yaml
+- f_generation.yaml
+- c_generation.yaml
+- d_generation.yaml
+- e_generation.yaml
+- 0_generation.yaml
 - b_generation.yaml

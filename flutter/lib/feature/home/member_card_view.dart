@@ -7,7 +7,7 @@ import 'package:motion_mis/motion_color.dart';
 class MemberCardViewController extends GetxController {
   Color getGenerationColor(String genName) {
     switch (genName) {
-      case 'Founder':
+      case 'Founders':
         return MotionColor.RED;
       case 'Generation A':
         return MotionColor.GREEN;

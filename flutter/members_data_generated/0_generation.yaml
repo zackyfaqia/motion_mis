@@ -1,0 +1,30 @@
+members:
+- about: Hello, I am Alif. I am someone who loves to learn something new and always
+    go for excellence. I specialize in Android Mobile Dev using Kotlin and Flutter.
+  cover_image: https://media-exp1.licdn.com/dms/image/C5616AQEDd4W9ASASQQ/profile-displaybackgroundimage-shrink_350_1400/0/1627980544946?e=1634774400&v=beta&t=Tee2ULYOYoQebYRlrev3dDUB0bBTkUaIkc0XZaJuukg
+  email: hello@alifakbar.com
+  full_name: Muhammad Alif Akbar
+  headline: Mobile Application Developer at Grab
+  linkedin: https://www.linkedin.com/in/muhammad-alif-akbar/
+  name: Alif Akbar
+  profile_image: https://media-exp1.licdn.com/dms/image/C5603AQGCkEVz7obtsg/profile-displayphoto-shrink_400_400/0/1590068673405?e=1634774400&v=beta&t=1OaQrcXIDa8-1h5LtcGjKo0PI2n-E80gVA6qygVWP28
+  role: Programmer | Aslab | Kordas
+- about: Lulusan Telkom University 2017
+  cover_image: https://media-exp1.licdn.com/dms/image/C5616AQFvs42n8RQqpw/profile-displaybackgroundimage-shrink_350_1400/0/1605017239953?e=1634774400&v=beta&t=Yvu6qFI-MFMXMn0gV_YszoMwkEbSMqAIQcf8y9tYY90
+  email: ''
+  full_name: I Gede Agus Maha Putra
+  headline: Software Engineer at AwanTunai
+  linkedin: https://www.linkedin.com/in/i-gede-agus-maha-putra-9a21ba134/
+  name: IG Deas Agus Maha Putra
+  profile_image: https://media-exp1.licdn.com/dms/image/C5103AQHXBLFnWLLLEQ/profile-displayphoto-shrink_400_400/0/1563989780321?e=1634774400&v=beta&t=wGbCdA-B5lqH02wgWzGUdnfIUyMfzOzxRCKNvzv7Bfg
+  role: Programmer | Aslab | Riset
+- about: ''
+  cover_image: ''
+  email: ''
+  full_name: Devye Bellika
+  headline: Software Quality Analyst at Telkom Indonesia
+  linkedin: https://www.linkedin.com/in/devyebellika
+  name: Devye Bellika
+  profile_image: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7
+  role: Technical Writer | Aslab | Sekertaris | Bendahara
+name: Founders
