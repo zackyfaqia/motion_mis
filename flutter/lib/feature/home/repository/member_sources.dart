@@ -1,5 +1,4 @@
 class MemberSources {
-  static const _BASE =
-      "https://raw.githubusercontent.com/luxinfity/motion_mis/main/members_data_generated";
-  static const CONFIG = '$_BASE/config.yaml';
+  static const BASE = "members_data_generated";
+  static const CONFIG = '$BASE/config.yaml';
 }

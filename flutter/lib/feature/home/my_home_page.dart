@@ -1,35 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:motion_mis/feature/home/model/member_data.dart';
 import 'package:motion_mis/feature/home/repository/member_repository.dart';
 
-class Member {
-  final int index;
-
-  Member(this.index);
-}
-
 class MyHomeController extends GetxController {
-  final firstLoad = true;
+  bool firstDataLoaded = false;
   final generationLoading = [true];
 
-  final httpClient = GetHttpClient();
   late MemberRepository memberRepository;
 
   @override
   void onInit() {
     super.onInit();
-    memberRepository = MemberRepository(httpClient);
+    memberRepository = MemberRepository();
   }
 
   @override
   void onReady() {
     super.onReady();
-    memberRepository.getFileList().then((value) {
-      print(value);
-    });
+    loadData();
   }
 
-  final members = List.generate(30, (index) => Member(index));
+  void loadData() async {
+    final generationPaths = await memberRepository.getFileList();
+
+    for (var genPath in generationPaths) {
+      final genData = await memberRepository.getGenerationData(genPath);
+      if (!firstDataLoaded) {
+        firstDataLoaded = true;
+        update();
+      }
+      print(genData.members[0].datas);
+    }
+  }
+
+  final members = List.generate(30, (index) => Member({}));
 }
 
 class MyHomePage extends GetResponsiveView {
@@ -59,7 +64,7 @@ class MyHomePage extends GetResponsiveView {
           itemBuilder: (ctx, idx) {
             return Container(
               alignment: Alignment.center,
-              child: Text('Member ${ctlr.members[idx].index}'),
+              child: Text('Member ${idx}'),
               decoration: BoxDecoration(
                 color: Colors.amber,
                 borderRadius: BorderRadius.circular(15),
