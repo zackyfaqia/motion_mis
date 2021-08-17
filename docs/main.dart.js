@@ -53931,7 +53931,7 @@ N.lJ.prototype={
 JR:function(a){switch(a){case"Founders":return $.a6y()
 case"Generation A":return $.agk()
 case"Buttermilk":return $.agj()
-case"Cheese Cake":return $.agm()
+case"Cheesecake":return $.agm()
 case"Derby Pie":return $.agn()
 case"Espresso":return $.agi()
 default:return $.a9H()}}}
