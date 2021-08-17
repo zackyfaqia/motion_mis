@@ -37,7 +37,7 @@ class MyHomePage extends GetResponsiveView {
 
   final String title;
 
-  Widget createScreen(double paddingSide) {
+  Widget createScreen(double paddingSide, double childAspectRatio) {
     return GetBuilder<MyHomeController>(
       init: MyHomeController(),
       builder: (ctlr) => Scaffold(
@@ -51,7 +51,7 @@ class MyHomePage extends GetResponsiveView {
           ),
           gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 400,
-            childAspectRatio: 3 / 2,
+            childAspectRatio: childAspectRatio,
             crossAxisSpacing: 10,
             mainAxisSpacing: 10,
           ),
@@ -64,7 +64,7 @@ class MyHomePage extends GetResponsiveView {
 
   @override
   Widget? builder() {
-    return createScreen(21);
+    return createScreen(21, 3 / 2);
   }
 
   @override
@@ -72,11 +72,11 @@ class MyHomePage extends GetResponsiveView {
     final screenIsSmall = Get.width < 1200;
     final dynamicPadding = (Get.width - 1200) / 2;
     final paddingSide = screenIsSmall ? 21.0 : 21 + dynamicPadding;
-    return createScreen(paddingSide);
+    return createScreen(paddingSide, 3 / 2);
   }
 
   @override
   Widget? phone() {
-    return createScreen(21);
+    return createScreen(21, 1);
   }
 }
