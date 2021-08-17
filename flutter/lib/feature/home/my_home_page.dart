@@ -64,7 +64,6 @@ class MyHomePage extends GetResponsiveView {
 
   @override
   Widget? builder() {
-    print('width: builder ${Get.width}');
     return createScreen(21);
   }
 
