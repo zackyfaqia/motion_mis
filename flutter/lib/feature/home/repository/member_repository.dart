@@ -25,7 +25,7 @@ class MemberRepository {
       final map = (element as YamlMap).map<String, dynamic>(
         (key, value) => MapEntry(key, value),
       );
-      return Member(map);
+      return Member(name, map);
     }).toList();
 
     return GenerationData(name, data);

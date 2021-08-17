@@ -4,8 +4,7 @@ import 'package:motion_mis/feature/home/model/member_data.dart';
 import 'package:motion_mis/feature/home/repository/member_repository.dart';
 
 class MyHomeController extends GetxController {
-  bool firstDataLoaded = false;
-  final generationLoading = [true];
+  final members = List.empty(growable: true);
 
   late MemberRepository memberRepository;
 
@@ -26,15 +25,10 @@ class MyHomeController extends GetxController {
 
     for (var genPath in generationPaths) {
       final genData = await memberRepository.getGenerationData(genPath);
-      if (!firstDataLoaded) {
-        firstDataLoaded = true;
-        update();
-      }
-      print(genData.members[0].datas);
+      members.addAll(genData.members);
+      update();
     }
   }
-
-  final members = List.generate(30, (index) => Member({}));
 }
 
 class MyHomePage extends GetResponsiveView {

@@ -1,7 +1,8 @@
 class Member {
+  final String generation;
   final Map<String, dynamic> datas;
 
-  Member(this.datas);
+  Member(this.generation, this.datas);
 
   String get fullName => datas['full_name'] ?? '';
 
