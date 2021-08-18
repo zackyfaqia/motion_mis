@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  build-member:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -38,14 +38,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install Python Deps
-        run: |
-          which chromedriver
-          which python
-          which python2
-          which python3
+        run: pip3 install -r requirements.txt
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Run Python Scrapper
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          chmod +x ./build_member.sh
+          ./build_member.sh
